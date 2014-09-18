@@ -7,9 +7,9 @@ namespace HWDefiningClassesTask02LaptopShop
 {
     using System;
 
-    class Test
+    public class Test
     {
-        static void Main()
+        public static void Main()
         {
         }
     }
