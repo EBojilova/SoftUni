@@ -36,7 +36,6 @@ namespace HWDefiningClassesTask04SULS
             st2.DeleteCourse("Drink brave!");
             do3.Reapply();
 
-
             List<Person> softUniPersons = new List<Person> 
             { 
                 jt1,
