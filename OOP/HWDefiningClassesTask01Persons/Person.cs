@@ -91,27 +91,13 @@ namespace HWDefiningClassesTask01Persons
             string name = string.Format("Name: {0}", this.Name);
             string age = string.Format(" Age: {0}", this.Age);
             string mail = string.Format("Mail: {0}", this.Mail);
-            int maxLength = this.GetMaxLength(new string[] { name, age, mail });
+            int maxLength = Utils.GetMaxLength(new string[] { name, age, mail });
             sb.AppendLine(string.Format("{0}{1}{2}", '\u2554', new string('\u2550', maxLength), '\u2557'));
             sb.AppendLine(string.Format("{0}{1}{0}", '\u2551', name.PadRight(maxLength, ' ')));
             sb.AppendLine(string.Format("{0}{1}{0}", '\u2551', age.PadRight(maxLength, ' ')));
             sb.AppendLine(string.Format("{0}{1}{0}", '\u2551', mail.PadRight(maxLength, ' ')));
             sb.AppendLine(string.Format("{0}{1}{2}", '\u255A', new string('\u2550', maxLength), '\u255D'));
             return sb.ToString();
-        }
-
-        private int GetMaxLength(string[] strings)
-        {
-            int maxLength = 0;
-            foreach (var str in strings)
-            {
-                if (maxLength < str.Length)
-                {
-                    maxLength = str.Length;
-                }
-            }
-
-            return maxLength;
         }
     }
 }
