@@ -69,7 +69,7 @@ namespace HWDefiningClassesTask02LaptopShop
 
             set
             {
-                this.ValidateString(value, "Model", true);
+                Utils.ValidateString(value, "Model", true);
                 this.model = value;
             }
         }
@@ -83,7 +83,7 @@ namespace HWDefiningClassesTask02LaptopShop
 
             set
             {
-                this.ValidateString(value, "Manufacturer");
+                Utils.ValidateString(value, "Manufacturer");
                 this.manufacturer = value;
             }
         }
@@ -97,7 +97,7 @@ namespace HWDefiningClassesTask02LaptopShop
 
             set
             {
-                this.ValidateString(value, "Processor");
+                Utils.ValidateString(value, "Processor");
                 this.processor = value;
             }
         }
@@ -129,7 +129,7 @@ namespace HWDefiningClassesTask02LaptopShop
 
             set
             {
-                this.ValidateString(value, "GraphicsCard");
+                Utils.ValidateString(value, "GraphicsCard");
                 this.graphicsCard = value;
             }
         }
@@ -143,7 +143,7 @@ namespace HWDefiningClassesTask02LaptopShop
 
             set
             {
-                this.ValidateString(value, "HDD");
+                Utils.ValidateString(value, "HDD");
                 this.hdd = value;
             }
         }
@@ -157,7 +157,7 @@ namespace HWDefiningClassesTask02LaptopShop
 
             set
             {
-                this.ValidateString(value, "Screen");
+                Utils.ValidateString(value, "Screen");
                 this.screen = value;
             }
         }
@@ -244,19 +244,6 @@ namespace HWDefiningClassesTask02LaptopShop
             sb.AppendLine(string.Format("\u2502{0}\u2502", price.PadRight(maxLength, ' ')));
             sb.AppendLine(string.Format("\u2514{0}\u2534{1}\u2518", new string('\u2500', 13), new string('\u2500', maxLength - 14)));
             return sb.ToString();
-        }
-
-        private void ValidateString(string value, string paramName, bool isMandatory = false)
-        {
-            if (value == string.Empty)
-            {
-                throw new ArgumentException(string.Format("{0} cannot be empty string!", paramName), paramName);
-            }
-
-            if (isMandatory && value == null)
-            {
-                throw new ArgumentNullException(paramName, string.Format("{0} is mandatory and cannot be null!", paramName));
-            }
         }
     }
 }
