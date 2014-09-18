@@ -25,8 +25,8 @@ namespace HWDefiningClassesTask04SULS
 
         public ushort NumberOfVisits
         {
-            get { return numberOfVisits; }
-            set { numberOfVisits = value; }
+            get { return this.numberOfVisits; }
+            set { this.numberOfVisits = value; }
         }
     }
 }

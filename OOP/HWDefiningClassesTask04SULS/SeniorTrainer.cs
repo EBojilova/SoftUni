@@ -16,7 +16,7 @@ namespace HWDefiningClassesTask04SULS
 
         public void DeleteCourse(string courseName)
         {
-            Console.WriteLine(string.Format("You delete a course: {0}", courseName));
+            Console.WriteLine(string.Format("{0} {1}, you delete a course: {2}", this.FirstName, this.LastName, courseName));
         }
     }
 }

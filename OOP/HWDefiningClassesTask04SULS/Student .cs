@@ -23,7 +23,7 @@ namespace HWDefiningClassesTask04SULS
         {
             get 
             { 
-                return studentNumber; 
+                return this.studentNumber; 
             }
 
             set 
@@ -33,7 +33,7 @@ namespace HWDefiningClassesTask04SULS
                     throw new ArgumentOutOfRangeException("StudentNumber", "StudentNumber must be in range 0...999999999");
                 }
 
-                studentNumber = value; 
+                this.studentNumber = value; 
             }
         }
 
@@ -41,7 +41,7 @@ namespace HWDefiningClassesTask04SULS
         {
             get 
             { 
-                return averageGrade; 
+                return this.averageGrade; 
             }
 
             set 
@@ -51,7 +51,7 @@ namespace HWDefiningClassesTask04SULS
                     throw new ArgumentOutOfRangeException("AverageGrade", "AverageGrade must be in range 3...6");
                 }
 
-                averageGrade = value; 
+                this.averageGrade = value; 
             }
         }
     }

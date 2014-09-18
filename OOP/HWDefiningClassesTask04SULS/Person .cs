@@ -5,8 +5,8 @@
 
 namespace HWDefiningClassesTask04SULS
 {
-    using HWDefiningClassesTask01Persons;
     using System;
+    using HWDefiningClassesTask01Persons;
 
     public abstract class Person
     {

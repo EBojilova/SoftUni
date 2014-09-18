@@ -5,9 +5,9 @@
 
 namespace HWDefiningClassesTask04SULS
 {
-    using HWDefiningClassesTask01Persons;
     using System;
     using System.Text;
+    using HWDefiningClassesTask01Persons;
 
     public class DropoutStudent : Student
     {
@@ -23,19 +23,20 @@ namespace HWDefiningClassesTask04SULS
         {
             get 
             { 
-                return dropoutReason; 
+                return this.dropoutReason; 
             }
 
             set 
             {
                 Utils.ValidateString(value, "DropoutReason", true);
-                dropoutReason = value; 
+                this.dropoutReason = value; 
             }
         }
 
         public void Reapply()
         {
             StringBuilder sb = new StringBuilder();
+            sb.AppendLine(new string('-', 30));
             sb.AppendLine(string.Format("First name: {0}", this.FirstName));
             sb.AppendLine(string.Format("Last name: {0}", this.LastName));
             sb.AppendLine(string.Format("Age: {0}", this.Age));
@@ -43,6 +44,8 @@ namespace HWDefiningClassesTask04SULS
             sb.AppendLine(string.Format("Average grade: {0}", this.AverageGrade));
             sb.AppendLine("Dropout reason:");
             sb.AppendLine(string.Format("    {0}", this.DropoutReason));
+            sb.AppendLine(new string('-', 30));
+            Console.WriteLine(sb.ToString());
         }
     }
 }

@@ -16,7 +16,7 @@ namespace HWDefiningClassesTask04SULS
 
         public void CreateCourse(string courseName)
         {
-            Console.WriteLine(string.Format("You created the course: {0}", courseName));
+            Console.WriteLine(string.Format("{0} {1}, you created the course: {2}", this.FirstName, this.LastName, courseName));
         }
     }
 }

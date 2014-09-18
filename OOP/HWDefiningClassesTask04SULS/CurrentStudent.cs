@@ -23,20 +23,26 @@ namespace HWDefiningClassesTask04SULS
         {
             get
             {
-                return currentCourse;
+                return this.currentCourse;
             }
 
             set
             {
                 Utils.ValidateString(value, "CurrentCourse", true);
-                currentCourse = value;
+                this.currentCourse = value;
             }
         }
 
         public override string ToString()
         {
             StringBuilder sb = new StringBuilder();
-
+            sb.AppendLine(string.Format("First name: {0}", this.FirstName));
+            sb.AppendLine(string.Format("Last name: {0}", this.LastName));
+            sb.AppendLine(string.Format("Age: {0}", this.Age));
+            sb.AppendLine(string.Format("Student number: {0}", this.StudentNumber));
+            sb.AppendLine(string.Format("Average grade: {0}", this.AverageGrade));
+            sb.AppendLine(string.Format("Current course: {0}", this.CurrentCourse));
+            return sb.ToString();
         }
     }
 }
