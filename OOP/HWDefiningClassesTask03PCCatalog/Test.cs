@@ -52,7 +52,6 @@ namespace HWDefiningClassesTask03PCCatalog
             // Testing reference of components - just for test ;)
             component1.Price = 220M; // Now in all computers this part have a new value
             
-
             // Creating list with computers
             List<Computer> computers = new List<Computer> { computer1, computer2, computer3 };
 
