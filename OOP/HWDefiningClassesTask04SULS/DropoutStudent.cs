@@ -1,0 +1,48 @@
+﻿// <copyright file="DropoutStudent.cs" company="Softuni">
+// Copyright (c) 2014 All Rights Reserved
+// <author>Me</author>
+// </copyright>
+
+namespace HWDefiningClassesTask04SULS
+{
+    using HWDefiningClassesTask01Persons;
+    using System;
+    using System.Text;
+
+    public class DropoutStudent : Student
+    {
+        private string dropoutReason;
+
+        public DropoutStudent(string firstName, string lastName, byte age, uint studentNumber, decimal averageGrade, string dropoutReason)
+            : base(firstName, lastName, age, studentNumber, averageGrade)
+        {
+            this.DropoutReason = dropoutReason;
+        }
+
+        public string DropoutReason
+        {
+            get 
+            { 
+                return dropoutReason; 
+            }
+
+            set 
+            {
+                Utils.ValidateString(value, "DropoutReason", true);
+                dropoutReason = value; 
+            }
+        }
+
+        public void Reapply()
+        {
+            StringBuilder sb = new StringBuilder();
+            sb.AppendLine(string.Format("First name: {0}", this.FirstName));
+            sb.AppendLine(string.Format("Last name: {0}", this.LastName));
+            sb.AppendLine(string.Format("Age: {0}", this.Age));
+            sb.AppendLine(string.Format("Student number: {0}", this.StudentNumber));
+            sb.AppendLine(string.Format("Average grade: {0}", this.AverageGrade));
+            sb.AppendLine("Dropout reason:");
+            sb.AppendLine(string.Format("    {0}", this.DropoutReason));
+        }
+    }
+}
