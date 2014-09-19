@@ -14,7 +14,7 @@ namespace HWDefiningClassesTask04SULS
         {
             JuniorTrainer juniorTrainer1 = new JuniorTrainer("Pesho", "Peshov", 24);
             JuniorTrainer juniorTrainer2 = new JuniorTrainer("GonlineStudentho", "GonlineStudentov", 27);
-            JuniorTrainer juniorTrainer3 = new JuniorTrainer("Vladko", "Vladkov", 19);
+            JuniorTrainer juniorTrainer3 = new JuniorTrainer("Vladko", "Vladov", 19);
             SeniorTrainer seniorTrainer1 = new SeniorTrainer("Petko", "Petkov", 33);
             SeniorTrainer seniorTrainer2 = new SeniorTrainer("Stefan", "Stefanov", 38);
             SeniorTrainer seniorTrainer3 = new SeniorTrainer("Martin", "Martinov", 29);
